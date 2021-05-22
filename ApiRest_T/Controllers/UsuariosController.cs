@@ -91,7 +91,10 @@ namespace ApiRest_T.Controllers
             
                 _context.Usuario.Add(usuario);
             ///string casa = usuario.casa;
-            if (usuario.casa.Equals("Gryffindor") || usuario.casa.Equals("Hufflepuff") || usuario.casa.Equals("Ravenclaw") || usuario.casa.Equals("Slytherin"))
+            if (usuario.casa.Equals("Gryffindor") || usuario.casa.Equals("gryffindor") || usuario.casa.Equals("GRYFFINDOR") ||
+                usuario.casa.Equals("Hufflepuff") || usuario.casa.Equals("hufflepuff") || usuario.casa.Equals("HUFFLEPUFF") ||
+                usuario.casa.Equals("Ravenclaw") || usuario.casa.Equals("ravenclaw") || usuario.casa.Equals("RAVENCLAW") ||
+                usuario.casa.Equals("Slytherin") || usuario.casa.Equals("slytherin") || usuario.casa.Equals("SLYTHERIN"))
             {
                 await _context.SaveChangesAsync();
 
@@ -100,7 +103,7 @@ namespace ApiRest_T.Controllers
             }
             else 
             {
-
+                
                 return BadRequest();
             }
 
